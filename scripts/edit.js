@@ -31,7 +31,7 @@ async function updateSong() {
         popularity: document.querySelector("#popularity").value,
         genre: document.querySelector("#genre").value ? document.querySelector("#genre").value.split(",") : [] // Ternary operator.Split the genre string into an array when there are commas.
     };
-    const response = await fetch("https://climbing-speckle-wasp.glitch.me/api/songs" + songID, {  //Put the song object to the server and save the song to the database
+    const response = await fetch("https://climbing-speckle-wasp.glitch.me/api/songs/" + songID, {  //Put the song object to the server and save the song to the database //Added slash after ...api/songs/
         method: "PUT",
         headers: {
             "Content-Type": "application/json"  //Must specify format being sent
