@@ -16,7 +16,7 @@ async function deleteSong() {
 
     if (response.ok) {
         alert("Song deleted successfully");
-        window.location.href = "/index.html";  // Redirect to the main page after deletion
+        window.location.href = "index.html";  // Redirect to the main page after deletion // removed slash before index.html
     } else {
         alert("Failed to delete the song");
     }
